@@ -7,6 +7,12 @@ class AlertPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Alert Page'),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.keyboard_arrow_left),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      ),
     );
   }
 }
