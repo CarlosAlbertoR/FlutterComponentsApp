@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_components_app/src/providers/menu_provider.dart';
 import 'package:flutter_components_app/src/utils/icon_string_util.dart';
 
@@ -47,7 +46,9 @@ class HomePage extends StatelessWidget {
           // Navigator.push(context, route);
         },
       );
-      options..add(widgetTemp)..add(Divider());
+      options
+        ..add(widgetTemp)
+        ..add(Divider());
     });
 
     return options;

@@ -19,7 +19,9 @@ class HomePageTemp extends StatelessWidget {
     List<Widget> list = new List<Widget>();
     for (String opt in options) {
       final tempWidget = ListTile(title: Text(opt));
-      list..add(tempWidget)..add(Divider());
+      list
+        ..add(tempWidget)
+        ..add(Divider());
     }
     return list;
   }
