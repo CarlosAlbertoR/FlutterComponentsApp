@@ -7,12 +7,55 @@ class AlertPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Alert Page'),
       ),
+      body: Center(
+        child: RaisedButton(
+          child: Text('Show Alert'),
+          color: Colors.blue,
+          textColor: Colors.white,
+          shape: StadiumBorder(),
+          onPressed: () => _showAlert(context),
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.keyboard_arrow_left),
         onPressed: () {
           Navigator.pop(context);
         },
       ),
+    );
+  }
+
+  void _showAlert(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: true,
+      builder: (context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),
+          ),
+          title: Text('Title'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Text("This is the alert's text."),
+              FlutterLogo(size: 100.0),
+            ],
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Cancel'),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
+            TextButton(
+              child: Text('Ok'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 }
