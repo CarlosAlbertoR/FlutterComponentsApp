@@ -7,4 +7,5 @@ Application that shows components and basic functionalities of Flutter.
 ![](./assets_readme/screenshots/ScreenshotComponents.jpeg)
 
 ## Apk
-[Download Apk](./assets_readme/apk/Components.apk)
+<!-- [Download Apk](./assets_readme/apk/Components.apk) -->
+<a href="./assets_readme/apk/Components.apk" download>Download Apk</a>
